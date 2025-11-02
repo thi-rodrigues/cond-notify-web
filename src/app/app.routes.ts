@@ -18,7 +18,23 @@ export const routes: Routes = [
     canActivate: [],
   },
   {
+    path: 'https://condnotify.netlify.app/home',
+    loadComponent: () =>
+      import('./core/pages/home/home.component').then(
+        (c) => c.HomeComponent
+      ),
+    canActivate: [],
+  },
+  {
     path: 'order-details/:id',
+    loadComponent: () =>
+      import('./core/pages/order-details/order-details.component').then(
+        (c) => c.OrderDetailsComponent
+      ),
+    canActivate: []
+  },
+  {
+    path: 'https://condnotify.netlify.app/order-details/:id',
     loadComponent: () =>
       import('./core/pages/order-details/order-details.component').then(
         (c) => c.OrderDetailsComponent
