@@ -1,0 +1,31 @@
+$white: #ffffff;
+$blue: #1C7CF2;
+
+.wrapper {
+  background-color: lightcyan;
+  width: calc(100%);
+  height: calc(100vh - 50px - 20px);
+  margin-top: 50px;
+}
+
+.recipient-observation {
+  background-color: rgb(171, 171, 118);
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  display: table;
+  background-color: lightblue;
+  padding: 1rem;
+}
+
+.btn-send-notification {
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 8px;
+  background-color: $blue !important;
+  width: 333px;
+  height: 45px;
+  font-size: 12px;
+}

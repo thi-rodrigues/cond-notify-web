@@ -36,11 +36,16 @@ export class LoginComponent {
   }
 
   login() {
-    // let login: Login = { login: this.form.value.cpf!, password: this.form.value.password!, token: '' };
+    let login: Login = { login: this.form.value.cpf!, password: this.form.value.password!, token: '' };
     // this.loginService.login(login).subscribe(res => {
     //   localStorage.setItem("token", res.token)
       this.messageService.showMessage('Login efetuado com sucesso!', Error.SUCCESS);
-      location.href = '/home';
+
+      if (login.login.includes('069')) {
+        location.href = '/home';
+      } else {
+        location.href = '/order-register';
+      }
     // }, error => {
     //   if (error.error) {
     //     console.log(error.error.message);

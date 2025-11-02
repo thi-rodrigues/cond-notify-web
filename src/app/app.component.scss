@@ -1,6 +1,8 @@
 .page-wrapper {
-  min-height: calc(100vh - 50px);
-  height: calc(100vh - 50px);
+  min-height: calc(100vh - 50px - 20px);
+  height: calc(100vh - 50px - 20px);
+  // background-color: coral;
+  // margin-top: 50px;
 
   h1 {
     font-weight: 600;

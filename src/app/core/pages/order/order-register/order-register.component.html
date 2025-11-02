@@ -1,0 +1,34 @@
+<div class="wrapper">
+  <section>
+    <img src="assets/img/svg/camera.svg" alt="" (click)="openModalPhoto()" />
+    Tirar foto
+  </section>
+
+  <section>
+    <form
+      [formGroup]="form"
+      action=""
+      class="recipient-observation d-flex justify-content-center"
+    >
+      <mat-form-field>
+        <mat-label>Morador(a):</mat-label>
+        <input matInput formControlName="recipient" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Observação:</mat-label>
+        <input matInput formControlName="observation" />
+      </mat-form-field>
+    </form>
+    <div class="w-100 d-flex justify-content-center">
+      <button mat-flat-button class="btn-send-notification" (click)="sendNotification()">
+        Enviar Notificação
+      </button>
+    </div>
+  </section>
+
+  <br /><br /><br /><br /><br />
+  <!-- TODO: TEM QUE FICAR NO HEADER -->
+  <a href="/">Logout</a>
+
+</div>

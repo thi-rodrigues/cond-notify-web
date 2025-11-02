@@ -17,28 +17,36 @@ export const routes: Routes = [
       ),
     canActivate: [],
   },
-  {
-    path: 'https://condnotify.netlify.app/home',
-    loadComponent: () =>
-      import('./core/pages/home/home.component').then(
-        (c) => c.HomeComponent
-      ),
-    canActivate: [],
-  },
+  // {
+  //   path: 'https://condnotify.netlify.app/home',
+  //   loadComponent: () =>
+  //     import('./core/pages/home/home.component').then(
+  //       (c) => c.HomeComponent
+  //     ),
+  //   canActivate: [],
+  // },
   {
     path: 'order-details/:id',
     loadComponent: () =>
-      import('./core/pages/order-details/order-details.component').then(
+      import('./core/pages/order/order-details/order-details.component').then(
         (c) => c.OrderDetailsComponent
       ),
     canActivate: []
   },
-  {
-    path: 'https://condnotify.netlify.app/order-details/:id',
+  // {
+  //   path: 'https://condnotify.netlify.app/order-details/:id',
+  //   loadComponent: () =>
+  //     import('./core/pages/order-details/order-details.component').then(
+  //       (c) => c.OrderDetailsComponent
+  //     ),
+  //   canActivate: []
+  // }
+    {
+    path: 'order-register',
     loadComponent: () =>
-      import('./core/pages/order-details/order-details.component').then(
-        (c) => c.OrderDetailsComponent
+      import('./core/pages/order/order-register/order-register.component').then(
+        (c) => c.OrderRegisterComponent
       ),
     canActivate: []
-  }
+  },
 ];

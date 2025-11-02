@@ -3,18 +3,19 @@ $blue: #1C7CF2;
 
 .wrapper {
   width: 100vw;
-  height: 100vh;
-  background-color: red;
+  // height: 100vh;
+  min-height: calc(100vh - 50px - 20px);
+  height: calc(100vh - 50px - 20px);
+  // background-color: red;
   margin: 0;
   padding: 0.5rem;
   box-sizing: border-box;
   background: linear-gradient(#019eff 0%, #43d8e4 55%, #1fcdaa 92%);
-  width: 100vw;
-  height: 100vh;
   overflow: hidden;
+  margin-top: 50px;
   @media (max-width: 576px) {
     width: 100dvw;
-    height: 100lvh;
+    height: calc(100lvh - 50px - 20px);
   }
 }
 
