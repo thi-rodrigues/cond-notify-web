@@ -36,20 +36,20 @@ export class LoginComponent {
   }
 
   login() {
-    let login: Login = { login: this.form.value.cpf!, password: this.form.value.password!, token: '' };
-    this.loginService.login(login).subscribe(res => {
-      localStorage.setItem("token", res.token)
+    // let login: Login = { login: this.form.value.cpf!, password: this.form.value.password!, token: '' };
+    // this.loginService.login(login).subscribe(res => {
+    //   localStorage.setItem("token", res.token)
       this.messageService.showMessage('Login efetuado com sucesso!', Error.SUCCESS);
       location.href = '/home';
-    }, error => {
-      if (error.error) {
-        console.log(error.error.message);
-        this.messageService.showMessage(error.error.message, Error.ERROR);
-      }
-      else {
-        this.messageService.showMessage('Erro ao fazer login', Error.ERROR);
-        console.log(error);
-      }
-    });
+    // }, error => {
+    //   if (error.error) {
+    //     console.log(error.error.message);
+    //     this.messageService.showMessage(error.error.message, Error.ERROR);
+    //   }
+    //   else {
+    //     this.messageService.showMessage('Erro ao fazer login', Error.ERROR);
+    //     console.log(error);
+    //   }
+    // });
   }
 }
