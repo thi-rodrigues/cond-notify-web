@@ -16,4 +16,9 @@ export class LoginService {
   login(login: Login): Observable<Login> {
     return this.http.post<Login>(`${this.apiBackend}`, login);
   }
+
+  logout()  {
+    localStorage.removeItem('user');
+    location.href = "/";
+  }
 }

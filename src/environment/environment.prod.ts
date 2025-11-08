@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  apiBackend: 'https://condnotify.onrender.com' // HOSPEDADO NO https://render.com/
+  apiBackend: 'http://localhost:8080'
+  // apiBackend: 'https://condnotify.onrender.com' // HOSPEDADO NO https://render.com/
 };

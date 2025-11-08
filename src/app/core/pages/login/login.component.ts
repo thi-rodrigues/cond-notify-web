@@ -9,6 +9,7 @@ import { Login } from '../../../model/login.interface';
 import { LoginService } from '../../../services/login.service';
 import { MessageService } from '../../../services/message.service';
 import { Error } from '../../../model/type-error';
+import { UserService } from '../../../services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -21,7 +22,8 @@ export class LoginComponent {
 
   constructor(
     private loginService: LoginService,
-    private messageService: MessageService
+    private messageService: MessageService,
+    private userService: UserService
   ) { }
 
   form = new FormGroup({
@@ -37,24 +39,25 @@ export class LoginComponent {
 
   login() {
     let login: Login = { login: this.form.value.cpf!, password: this.form.value.password!, token: '' };
-    // this.loginService.login(login).subscribe(res => {
-    //   localStorage.setItem("token", res.token)
+    this.loginService.login(login).subscribe(res => {
+      console.log('res: ',res);
       this.messageService.showMessage('Login efetuado com sucesso!', Error.SUCCESS);
+      this.userService.setUser(res);
 
       if (login.login.includes('069')) {
         location.href = '/home';
       } else {
         location.href = '/order-register';
       }
-    // }, error => {
-    //   if (error.error) {
-    //     console.log(error.error.message);
-    //     this.messageService.showMessage(error.error.message, Error.ERROR);
-    //   }
-    //   else {
-    //     this.messageService.showMessage('Erro ao fazer login', Error.ERROR);
-    //     console.log(error);
-    //   }
-    // });
+    }, error => {
+      if (error.error) {
+        console.log(error.error.message);
+        this.messageService.showMessage(error.error.message, Error.ERROR);
+      }
+      else {
+        this.messageService.showMessage('Erro ao fazer login', Error.ERROR);
+        console.log(error);
+      }
+    });
   }
 }
