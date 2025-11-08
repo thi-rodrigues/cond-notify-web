@@ -1,14 +1,14 @@
 
-<div class="home">
-  <h1>Login Success!</h1>
+<div class="home-container">
+  <!-- <h1>Login Success!</h1> -->
 
-  <h3>Minhas encomendas</h3>
+  <!-- <h3>Minhas encomendas</h3> -->
 
-  <section class="orders">
-    <app-card-orders class="order" [routerLink]="['/order-details/1']"></app-card-orders>
-    <app-card-orders class="order" [routerLink]="['/order-details/2']"></app-card-orders>
-    <app-card-orders class="order" [routerLink]="['/order-details/3']"></app-card-orders>
-    <app-card-orders class="order" [routerLink]="['/order-details/4']"></app-card-orders>
+  <section class="section-home">
+    <app-card-home class="home" [routerLink]="['/morador/cadastrar']" [name]="'Cadastrar Morador'" [image]="'/assets/img/svg/box-blue-light.svg'"></app-card-home>
+    <app-card-home class="home" [routerLink]="['/order-details/2']" [name]="'Moradores'" [image]="'/assets/img/svg/box-blue-light.svg'"></app-card-home>
+    <app-card-home class="home" [routerLink]="['/order-details/3']" [name]="'Cadastrar Morador'" [image]="'/assets/img/svg/box-blue-light.svg'"></app-card-home>
+    <app-card-home class="home" [routerLink]="['/order-details/4']" [name]="'Cadastrar Morador'" [image]="'/assets/img/svg/box-blue-light.svg'"></app-card-home>
   </section>
 
   <div *ngIf="false">

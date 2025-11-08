@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CardHomeComponent } from "../../../shared/cards/card-home/card-home.component";
+import { CardOrdersComponent } from "../../../shared/cards/card-home/card-home.component";
 import { RouterLink } from "@angular/router";
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule , CardHomeComponent, RouterLink, MatFormFieldModule, ReactiveFormsModule],
+  imports: [CommonModule , CardOrdersComponent, RouterLink, MatFormFieldModule, ReactiveFormsModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

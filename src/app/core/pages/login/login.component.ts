@@ -43,12 +43,7 @@ export class LoginComponent {
       console.log('res: ',res);
       this.messageService.showMessage('Login efetuado com sucesso!', Error.SUCCESS);
       this.userService.setUser(res);
-
-      if (login.login.includes('069')) {
-        location.href = '/home';
-      } else {
-        location.href = '/order-register';
-      }
+      location.href = '/home';
     }, error => {
       if (error.error) {
         console.log(error.error.message);
