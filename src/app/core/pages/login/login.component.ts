@@ -8,13 +8,14 @@ import { NgxMaskDirective } from "ngx-mask";
 import { Login } from '../../../model/login.interface';
 import { LoginService } from '../../../services/login.service';
 import { MessageService } from '../../../services/message.service';
-import { Error } from '../../../model/type-error';
+import { Alert } from '../../../model/alert';
 import { UserService } from '../../../services/user.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [MatButtonModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatIconModule, ReactiveFormsModule, NgxMaskDirective],
+  imports: [CommonModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatIconModule, ReactiveFormsModule, NgxMaskDirective],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
@@ -41,16 +42,16 @@ export class LoginComponent {
     let login: Login = { login: this.form.value.cpf!, password: this.form.value.password!, token: '' };
     this.loginService.login(login).subscribe(res => {
       console.log('res: ',res);
-      this.messageService.showMessage('Login efetuado com sucesso!', Error.SUCCESS);
+      this.messageService.showMessage('Login efetuado com sucesso!', Alert.SUCCESS);
       this.userService.setUser(res);
       location.href = '/home';
     }, error => {
       if (error.error) {
         console.log(error.error.message);
-        this.messageService.showMessage(error.error.message, Error.ERROR);
+        this.messageService.showMessage(error.error.message, Alert.ERROR);
       }
       else {
-        this.messageService.showMessage('Erro ao fazer login', Error.ERROR);
+        this.messageService.showMessage('Erro ao fazer login', Alert.ERROR);
         console.log(error);
       }
     });
