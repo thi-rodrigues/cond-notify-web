@@ -20,8 +20,16 @@ export const routes: Routes = [
   {
     path: 'morador/cadastrar',
     loadComponent: () =>
-      import('./core/pages/morador/morador.component').then(
+      import('./core/pages/morador/cadastro/morador.component').then(
         (c) => c.MoradorComponent
+      ),
+    canActivate: [],
+  },
+  {
+    path: 'morador/todos',
+    loadComponent: () =>
+      import('./core/pages/morador/lista/morador-list.component').then(
+        (c) => c.MoradorListComponent
       ),
     canActivate: [],
   },

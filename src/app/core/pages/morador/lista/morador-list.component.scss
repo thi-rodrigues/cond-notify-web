@@ -1,0 +1,37 @@
+$yellow: #f3e500;
+
+.morador-list-container {
+  padding: 100px 1rem 0 1rem;
+  background-color: lightcoral;
+  width: calc(100%);
+  height: calc(100vh);
+  @media (max-width: 576px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+table {
+  width: 100%;
+}
+
+.section-buttons {
+  margin-top: 1rem;
+  width: 333px;
+  // background-color: blue;
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 576px) {
+  }
+}
+
+.btn-back {
+  border-radius: 8px !important;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6) !important;
+}
+
+.btn-back {
+  background-color: $yellow !important;
+  color: black !important;
+}

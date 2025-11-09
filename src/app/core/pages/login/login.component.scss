@@ -39,6 +39,9 @@ $blue: #1C7CF2;
   // background-color: yellow;
   flex-direction: column;
   align-items: center;
+  mat-form-field {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6) !important;
+  }
 }
 
 .cpf-password mat-form-field + mat-form-field {

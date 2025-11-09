@@ -6,15 +6,16 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { NgxMaskDirective } from "ngx-mask";
-import { MoradorService } from '../../../services/morador.service';
-import { Morador } from '../../../model/morador.interface';
-import { MessageService } from '../../../services/message.service';
-import { Alert } from '../../../model/alert';
+import { MoradorService } from '../../../../services/morador.service';
+import { Morador } from '../../../../model/morador.interface';
+import { MessageService } from '../../../../services/message.service';
+import { Alert } from '../../../../model/alert';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-morador',
   standalone: true,
-  imports: [CommonModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatIconModule, ReactiveFormsModule, NgxMaskDirective],
+  imports: [CommonModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatIconModule, ReactiveFormsModule, NgxMaskDirective, RouterLink],
   templateUrl: './morador.component.html',
   styleUrl: './morador.component.scss'
 })
@@ -43,10 +44,5 @@ export class MoradorComponent {
     })
 
   }
-
-  back() {
-    location.href = '/home';
-  }
-
 
 }
