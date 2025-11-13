@@ -15,4 +15,8 @@ export class UserService {
   getUser(): User {
     return JSON.parse(localStorage.getItem("user") || '');
   }
+
+  getRole(): String {
+    return JSON.parse(localStorage.getItem("user") || '').role;
+  }
 }

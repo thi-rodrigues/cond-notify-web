@@ -4,6 +4,7 @@ import { RouterLink } from "@angular/router";
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { CommonModule } from '@angular/common';
+import { UserService } from '../../../services/user.service';
 
 @Component({
   selector: 'app-home',
@@ -13,8 +14,13 @@ import { CommonModule } from '@angular/common';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
+
+  constructor(readonly userService: UserService){}
+
   ngOnInit(): void {
     console.log('HomeComponent');
+    console.log(this.userService.getUser());
+
   }
 
   form = new FormGroup({

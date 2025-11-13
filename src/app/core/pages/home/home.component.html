@@ -1,14 +1,22 @@
 
 <div class="home-container">
-  <!-- <h1>Login Success!</h1> -->
-
-  <!-- <h3>Minhas encomendas</h3> -->
-
   <section class="section-home">
-    <app-card-home class="home" [routerLink]="['/morador/cadastrar']" [name]="'Cadastrar Morador'" [image]="'/assets/img/svg/box-blue-light.svg'"></app-card-home>
-    <app-card-home class="home" [routerLink]="['/morador/todos']" [name]="'Moradores'" [image]="'/assets/img/svg/box-blue-light.svg'"></app-card-home>
-    <app-card-home class="home" [routerLink]="['/order-details/3']" [name]="'Cadastrar Morador'" [image]="'/assets/img/svg/box-blue-light.svg'"></app-card-home>
-    <app-card-home class="home" [routerLink]="['/order-details/4']" [name]="'Cadastrar Morador'" [image]="'/assets/img/svg/box-blue-light.svg'"></app-card-home>
+    <app-card-home *ngIf="userService.getRole().includes('USER')" class="home" [routerLink]="['/morador/cadastrar']" [name]="'Minhas encomendas'" [image]="'/assets/img/svg/box-blue-light.svg'">
+    </app-card-home>
+
+    <app-card-home *ngIf="userService.getRole().includes('ADMIN')"  class="home" [routerLink]="['/morador/cadastrar']" [name]="'Cadastrar Morador'" [image]="'/assets/img/svg/box-blue-light.svg'">
+    </app-card-home>
+
+    <app-card-home *ngIf="userService.getRole().includes('ADMIN')"  class="home" [routerLink]="['/morador/todos']" [name]="'Moradores'" [image]="'/assets/img/svg/box-blue-light.svg'">
+    </app-card-home>
+
+    <app-card-home *ngIf="userService.getRole().includes('ADMIN')" class="home"
+      [routerLink]="['/order-register']" [name]="'Registrar Encomenda'" [image]="'/assets/img/svg/box-blue-light.svg'">
+    </app-card-home>
+
+    <app-card-home *ngIf="userService.getRole().includes('ADMIN')" class="home"
+      [routerLink]="['/order-details/4']" [name]="'Cadastrar Morador'" [image]="'/assets/img/svg/box-blue-light.svg'">
+    </app-card-home>
   </section>
 
   <div *ngIf="false">

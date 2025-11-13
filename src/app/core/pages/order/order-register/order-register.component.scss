@@ -1,5 +1,6 @@
 $white: #ffffff;
 $blue: #1C7CF2;
+$yellow: #f3e500;
 
 .wrapper {
   background-color: lightcyan;
@@ -28,4 +29,22 @@ section {
   width: 333px;
   height: 45px;
   font-size: 12px;
+}
+
+.section-buttons {
+  margin-top: 1rem;
+  width: 333px;
+  // background-color: blue;
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 576px) {
+  }
+}
+
+
+.btn-back {
+  border-radius: 8px !important;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6) !important;
+  background-color: $yellow !important;
+  color: black !important;
 }
