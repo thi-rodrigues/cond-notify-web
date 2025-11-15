@@ -1,5 +1,26 @@
-<div class="header" >
-  <button *ngIf="true" (click)="logout()">
-    Logout
-  </button>
+<div class="header" *ngIf="!page()?.includes('login')">
+  <div class="profile">
+    <img
+      src="assets/img/svg/profile-man.svg"
+      alt=""
+      class="profile-img"
+      (click)="showMenu()"
+    />
+
+    <div class="profile-container-buttom" *ngIf="openMenu">
+      <button class="btn-logout" (click)="logout()">Logout</button>
+      <button class="btn-logout" (click)="logout()">Logout 1</button>
+      <button class="btn-logout" (click)="logout()">Logout 2</button>
+      <button class="btn-logout" (click)="logout()">Logout 3</button>
+      <button class="btn-logout" (click)="logout()">Logout 4</button>
+      <button class="btn-logout" (click)="logout()">Logout 5</button>
+    </div>
+  </div>
+  <!-- <img src="assets/img/svg/profile-woman.svg" alt=""> -->
+
+  <!-- <mat-icon
+    aria-hidden="false"
+    aria-label="Example home icon"
+    fontIcon="home"
+  ></mat-icon> -->
 </div>

@@ -19,6 +19,6 @@ export class LoginService {
 
   logout()  {
     localStorage.removeItem('user');
-    location.href = "/";
+    location.href = "/login";
   }
 }

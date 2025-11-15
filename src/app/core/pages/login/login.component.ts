@@ -39,21 +39,21 @@ export class LoginComponent {
   }
 
   login() {
-    let login: Login = { login: this.form.value.cpf!, password: this.form.value.password!, token: '' };
-    this.loginService.login(login).subscribe(res => {
-      console.log('res: ',res);
+    // let login: Login = { login: this.form.value.cpf!, password: this.form.value.password!, token: '' };
+    // this.loginService.login(login).subscribe(res => {
+    //   console.log('res: ',res);
       this.messageService.showMessage('Login efetuado com sucesso!', Alert.SUCCESS);
-      this.userService.setUser(res);
+      // this.userService.setUser(res);
       location.href = '/home';
-    }, error => {
-      if (error.error) {
-        console.log(error.error.message);
-        this.messageService.showMessage(error.error.message, Alert.ERROR);
-      }
-      else {
-        this.messageService.showMessage('Erro ao fazer login', Alert.ERROR);
-        console.log(error);
-      }
-    });
+    // }, error => {
+    //   if (error.error) {
+    //     console.log(error.error.message);
+    //     this.messageService.showMessage(error.error.message, Alert.ERROR);
+    //   }
+    //   else {
+    //     this.messageService.showMessage('Erro ao fazer login', Alert.ERROR);
+    //     console.log(error);
+    //   }
+    // });
   }
 }

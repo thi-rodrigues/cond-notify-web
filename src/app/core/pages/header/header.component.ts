@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, input, OnInit } from '@angular/core';
 import { LoginService } from '../../../services/login.service';
 
 @Component({
@@ -11,14 +11,25 @@ import { LoginService } from '../../../services/login.service';
 })
 export class HeaderComponent implements OnInit {
 
+  page = input<string>();
+  openMenu!: boolean;
+
   constructor(private loginService: LoginService){}
 
   ngOnInit(): void {
     // console.log(location.href);
+    this.openMenu = false;
+    // console.log(this.page());
+
   }
 
   logout() {
     this.loginService.logout();
+  }
+
+  showMenu() {
+    this.openMenu = !this.openMenu;
+    console.log(this.openMenu);
   }
 
 }

@@ -13,6 +13,10 @@ import { HeaderComponent } from './core/pages/header/header.component';
 export class AppComponent implements OnInit {
   title = 'cond-notify-web';
 
+  page!: string;
+
   ngOnInit(): void {
+    this.page = location.href;
+
   }
 }

@@ -3,14 +3,11 @@ $blue: #1C7CF2;
 
 .wrapper {
   width: 100vw;
-  // height: 100vh;
   min-height: calc(100vh - 50px - 20px);
   height: calc(100vh - 50px - 20px);
-  // background-color: red;
   margin: 0;
   padding: 0.5rem;
   box-sizing: border-box;
-  background: linear-gradient(#019eff 0%, #43d8e4 55%, #1fcdaa 92%);
   overflow: hidden;
   margin-top: 50px;
   @media (max-width: 576px) {
@@ -20,7 +17,7 @@ $blue: #1C7CF2;
 }
 
 .box-login {
-  margin-top: 3.875rem; // 62px
+  margin-top: 2rem; // 36px
   display: flex;
   justify-content: center;
 }
@@ -55,6 +52,7 @@ $blue: #1C7CF2;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  background: linear-gradient(#019eff 0%, #43d8e4 55%, #1fcdaa 92%);
 }
 
 section {
