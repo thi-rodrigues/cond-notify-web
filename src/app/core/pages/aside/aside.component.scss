@@ -1,0 +1,24 @@
+.aside {
+  width: 0% !important;
+  // height: 100%;
+  background-color: #1fcdaa;
+  position: fixed;
+  right: 0;
+  top: 12%;
+  z-index: 1;
+  border-top-left-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  .btn-logout {
+    background-color: #feff00;
+    border-radius: 8px;
+
+  }
+}
+
+.show-menu {
+  width: 25% !important;
+  // transition: margin-right 2s;
+  transition: all 0.3s ease-in-out;
+}
