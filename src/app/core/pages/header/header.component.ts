@@ -1,6 +1,8 @@
+import { UserService } from './../../../services/user.service';
 import { CommonModule } from '@angular/common';
 import { Component, input, OnInit } from '@angular/core';
 import { LoginService } from '../../../services/login.service';
+import { MenuService } from '../../../services/menu.service';
 
 @Component({
   selector: 'app-header',
@@ -11,25 +13,25 @@ import { LoginService } from '../../../services/login.service';
 })
 export class HeaderComponent implements OnInit {
 
-  page = input<string>();
-  openMenu!: boolean;
+  // page = input<string>();
+  // openMenu!: boolean;
 
-  constructor(private loginService: LoginService){}
+  constructor(private loginService: LoginService, readonly userService: UserService, private menuService: MenuService){}
 
   ngOnInit(): void {
     // console.log(location.href);
-    this.openMenu = false;
+    // this.openMenu = false;
     // console.log(this.page());
 
   }
 
-  logout() {
-    this.loginService.logout();
-  }
+  // logout() {
+  //   this.loginService.logout();
+  // }
 
   showMenu() {
-    this.openMenu = !this.openMenu;
-    console.log(this.openMenu);
+    // this.openMenu = !this.openMenu;
+    this.menuService.showMenu();
   }
 
 }

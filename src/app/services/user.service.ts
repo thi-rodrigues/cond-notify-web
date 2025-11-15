@@ -2,21 +2,30 @@ import { Injectable } from '@angular/core';
 import { User } from '../model/user.interface';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UserService {
-
-  constructor() { }
+  constructor() {}
 
   setUser(user: any) {
-    localStorage.setItem("user", JSON.stringify(user));
+    localStorage.setItem('user', JSON.stringify(user));
   }
 
   getUser(): User {
-    return JSON.parse(localStorage.getItem("user") || '');
+    return JSON.parse(localStorage.getItem('user') || '');
   }
 
   getRole(): String {
-    return JSON.parse(localStorage.getItem("user") || '').role;
+    return JSON.parse(localStorage.getItem('user') || '').role;
+  }
+
+  setUserLogado() {
+    localStorage.setItem('userLogado', JSON.stringify(true));
+  }
+
+  hasUserLoggeIn(): boolean {
+    if ( localStorage.getItem('userLogado') )
+      return JSON.parse(localStorage.getItem('userLogado') || '');
+    return false;
   }
 }

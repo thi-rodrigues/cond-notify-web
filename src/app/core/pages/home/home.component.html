@@ -1,22 +1,32 @@
 
 <div class="home-container">
   <section class="section-home">
-    <!-- <app-card-home *ngIf="userService.getRole().includes('USER')" class="home" [routerLink]="['/morador/cadastrar']" [name]="'Minhas encomendas'" [image]="'/assets/img/svg/box-blue-light.svg'">
+    <!-- *ngIf="userService.getRole().includes('USER')"  -->
+    <app-card-home
+    class="home" [routerLink]="['/morador/cadastrar']" [name]="'Minhas encomendas'" [image]="'/assets/img/svg/box-blue-light.svg'">
     </app-card-home>
 
-    <app-card-home *ngIf="userService.getRole().includes('ADMIN')"  class="home" [routerLink]="['/morador/cadastrar']" [name]="'Cadastrar Morador'" [image]="'/assets/img/svg/box-blue-light.svg'">
+    <!-- *ngIf="userService.getRole().includes('ADMIN')"   -->
+    <app-card-home
+    class="home" [routerLink]="['/morador/cadastrar']" [name]="'Cadastrar Morador'" [image]="'/assets/img/svg/box-blue-light.svg'">
     </app-card-home>
 
-    <app-card-home *ngIf="userService.getRole().includes('ADMIN')"  class="home" [routerLink]="['/morador/todos']" [name]="'Moradores'" [image]="'/assets/img/svg/box-blue-light.svg'">
+    <!-- *ngIf="userService.getRole().includes('ADMIN')"  -->
+    <app-card-home
+    class="home" [routerLink]="['/morador/todos']" [name]="'Moradores'" [image]="'/assets/img/svg/box-blue-light.svg'">
     </app-card-home>
 
-    <app-card-home *ngIf="userService.getRole().includes('ADMIN')" class="home"
+    <!-- *ngIf="userService.getRole().includes('ADMIN')"  -->
+    <app-card-home
+    class="home"
       [routerLink]="['/order-register']" [name]="'Registrar Encomenda'" [image]="'/assets/img/svg/box-blue-light.svg'">
     </app-card-home>
 
-    <app-card-home *ngIf="userService.getRole().includes('ADMIN')" class="home"
+    <!-- *ngIf="userService.getRole().includes('ADMIN')"  -->
+    <app-card-home
+    class="home"
       [routerLink]="['/order-details/4']" [name]="'Cadastrar Morador'" [image]="'/assets/img/svg/box-blue-light.svg'">
-    </app-card-home> -->
+    </app-card-home>
   </section>
 
   <div *ngIf="false">

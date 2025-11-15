@@ -19,8 +19,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('HomeComponent');
-    // console.log(this.userService.getUser());
-
+    this.userService.setUserLogado()
   }
 
   form = new FormGroup({

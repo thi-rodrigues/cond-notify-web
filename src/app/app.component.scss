@@ -2,7 +2,6 @@
   min-height: calc(100vh - 50px - 20px);
   height: calc(100vh - 50px - 20px);
   background: linear-gradient(#019eff 0%, #43d8e4 55%, #1fcdaa 92%);
-  // margin-top: 50px;
 
   h1 {
     font-weight: 600;
@@ -13,7 +12,15 @@
 @media (max-width: 1024px) {
   .page-wrapper {
     height: unset;
-    // padding: 10px;
-    // margin: 0 10px 10px 10px;
   }
 }
+
+// aside {
+//   width: 25% !important;
+//   height: 100%;
+//   background-color: blue;
+//   position: absolute;
+//   right: 0;
+//   top: 50px;
+//   z-index: 1;
+// }

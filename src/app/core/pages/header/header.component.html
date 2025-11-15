@@ -1,4 +1,4 @@
-<div class="header" *ngIf="!page()?.includes('login')">
+<div class="header" *ngIf="userService.hasUserLoggeIn()">
   <div class="profile">
     <img
       src="assets/img/svg/profile-man.svg"
@@ -7,15 +7,20 @@
       (click)="showMenu()"
     />
 
-    <div class="profile-container-buttom" *ngIf="openMenu">
+    <!-- <div class="profile-container-buttom" *ngIf="openMenu">
       <button class="btn-logout" (click)="logout()">Logout</button>
       <button class="btn-logout" (click)="logout()">Logout 1</button>
       <button class="btn-logout" (click)="logout()">Logout 2</button>
       <button class="btn-logout" (click)="logout()">Logout 3</button>
       <button class="btn-logout" (click)="logout()">Logout 4</button>
       <button class="btn-logout" (click)="logout()">Logout 5</button>
-    </div>
+    </div> -->
   </div>
+
+
+
+
+
   <!-- <img src="assets/img/svg/profile-woman.svg" alt=""> -->
 
   <!-- <mat-icon
